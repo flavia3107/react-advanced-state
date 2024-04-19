@@ -68,8 +68,11 @@ function App() {
   }
 
   return (
-    // This is the context value created by using the createContext function
-    <CartContext.Provider>
+    /**
+     * This is the context value created by using the createContext function
+     * This will need a value property, which in case it will be an object as defined in context file
+     */
+    <CartContext.Provider value={{items: []}}>
       <Header
         cart={shoppingCart}
         onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
